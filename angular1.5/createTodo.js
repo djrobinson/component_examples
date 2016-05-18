@@ -8,11 +8,13 @@
         <h1>Create Todo</h1>
         <form>
           <input ng-model="newTodo" type="text" />
-          <input ng-click="$ctrl.createChildTodo(newTodo)" type="submit" />
+          <button ng-click="$ctrl.createChildTodo(newTodo)">Create</button>
         </form>
+        <input type="text" ng-model="$ctrl.current" />
       `,
       bindings: {
-        onCreate: '&'
+        onCreate: '&',
+        current: '<'
       },
       controller: createController
     });
@@ -21,7 +23,6 @@
     var ctrl = this;
 
     ctrl.createChildTodo = function(todoName){
-      console.log(todoName);
       var todo = {
         name: todoName,
         done: false
