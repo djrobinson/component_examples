@@ -4,8 +4,15 @@
   angular
     .module('exampleApp')
     .component('todo', {
-      template: `
-        <div>{{$ctrl.todo.name}}</div>
+      template:
+      `
+
+        <li>
+          <div>
+            {{$ctrl.todo.name}}<button>Complete</button>
+          </div>
+        </li>
+
       `,
       bindings: {
         todo: "<"
