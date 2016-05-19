@@ -9,31 +9,25 @@
         template:
         `
           <h1>Todo Container</h1>
-          <create-todo
-            on-create="ctrl.createTodo(todo)"
-            current="ctrl.current"
-            >
-          </create-todo>
-
-          <current-todo current="ctrl.current"></current-todo>
+          <create-todo></create-todo>
 
           <h3>Todo List</h3>
           <ul>
-            <todo
-              ng-repeat="todo in $ctrl.todos"
-              todo="todo"
-              set-current="ctrl.setCurrent(currentTodo)"
-              >
-            </todo>
+            <div ng-repeat="todo in ctrl.todos">
+              <todo></todo>
+            </div>
           </ul>
         `,
         controllerAs: 'ctrl',
-        controller: containerController
+        controller: containerController,
+        bindToController: true
       };
     });
 
   function containerController() {
-    this.todos = [
+    var ctrl = this;
+
+    ctrl.todos = [
       {
         name: 'Take out garbage',
         done: false
@@ -43,20 +37,5 @@
         done: false
       }
     ];
-
-    this.setCurrent = setCurrent;
-    this.createTodo = createTodo;
-
-    this.current = "Dingo";
-
-    function setCurrent(currentTodo){
-      console.log("set curr");
-      ctrl.current = currentTodo;
-    }
-
-    function createTodo(todo){
-      console.log(todo);
-      ctrl.todos.push(todo);
-    }
   }
 })();
