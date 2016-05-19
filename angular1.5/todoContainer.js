@@ -32,11 +32,11 @@
     var ctrl = this;
     ctrl.todos = [
       {
-        name: 'take out garbage',
+        name: 'Take out garbage',
         done: false
       },
       {
-        name: 'clean car',
+        name: 'Clean car',
         done: false
       }
     ];
