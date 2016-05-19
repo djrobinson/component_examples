@@ -12,8 +12,8 @@
           <create-todo todos="ctrl.todos"></create-todo>
 
           <h3>Todo List</h3>
-          <ul>
-            <todo ng-repeat="todo in ctrl.todos"></todo>
+          <ul ng-repeat="item in ctrl.todos">
+            <todo item="item"></todo>
           </ul>
         `,
         controllerAs: 'ctrl',

@@ -9,11 +9,14 @@
         `
           <li>
             <div class="todo">
-              <p>{{todo.name}}<p>
-              <button ng-click="ctrl.complete(todo)">Complete</button>
+              <p>{{ctrl.item.name}}<p>
+              <button ng-click="ctrl.complete(ctrl.item)">Complete</button>
             </div>
           </li>
         `,
+        scope: {
+          item: '='
+        },
         controllerAs: 'ctrl',
         controller: todoController,
         bindToController: true

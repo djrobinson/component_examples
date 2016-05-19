@@ -10,14 +10,11 @@
           <div class="todo">
             <p>{{$ctrl.todo.name}}<p>
             <button ng-click="$ctrl.complete()">Complete</button>
-            <button ng-click="$ctrl.updateCurrent()">Set Priority</button>
           </div>
         </li>
       `,
       bindings: {
         todo: "<",
-        current: "<",
-        setCurrent: "&"
       },
       controller: todoController
     });
