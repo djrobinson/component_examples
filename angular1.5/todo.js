@@ -8,8 +8,8 @@
       `
 
         <li>
-          <div>
-            {{$ctrl.todo.name}}
+          <div class="todo">
+            <p>{{$ctrl.todo.name}}<p>
             <button ng-click="$ctrl.complete()">Complete</button>
             <button ng-click="$ctrl.updateCurrent()">Set Priority</button>
           </div>
