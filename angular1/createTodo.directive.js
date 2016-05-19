@@ -8,10 +8,9 @@
         template: `
           <h1>Create Todo</h1>
           <form>
-            <input ng-model="newTodo" type="text" />
-            <button ng-click="$ctrl.createChildTodo(newTodo)">Create</button>
+            <input ng-model="ctrl.newTodo" type="text" />
+            <button ng-click="ctrl.createChildTodo(ctrl.newTodo)">Create</button>
           </form>
-          <input type="text" ng-model="$ctrl.current" />
         `,
         scope: {
           todos: '='
@@ -21,16 +20,15 @@
         bindToController: true
       };
     });
-
   function createController() {
     var ctrl = this;
-
     ctrl.createChildTodo = function(todoName){
       var todo = {
         name: todoName,
         done: false
       };
-      ctrl.onCreate({todo: todo});
+      ctrl.todos.push(todo);
+      ctrl.newTodo = "";
     };
   }
 

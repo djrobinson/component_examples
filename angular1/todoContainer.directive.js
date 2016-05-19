@@ -9,7 +9,7 @@
         template:
         `
           <h1>Todo Container</h1>
-          <create-todo></create-todo>
+          <create-todo todos="ctrl.todos"></create-todo>
 
           <h3>Todo List</h3>
           <ul>
