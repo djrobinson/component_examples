@@ -6,7 +6,6 @@
     .component('todo', {
       template:
       `
-
         <li>
           <div class="todo">
             <p>{{$ctrl.todo.name}}<p>
@@ -14,7 +13,6 @@
             <button ng-click="$ctrl.updateCurrent()">Set Priority</button>
           </div>
         </li>
-
       `,
       bindings: {
         todo: "<",
@@ -29,10 +27,6 @@
 
     ctrl.complete = function(){
       ctrl.todo.done = !ctrl.todo.done;
-    };
-
-    ctrl.updateCurrent = function(){
-      ctrl.setCurrent({currentTodo: ctrl.todo});
     };
   }
 })();

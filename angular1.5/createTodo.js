@@ -10,7 +10,6 @@
           <input ng-model="newTodo" type="text" />
           <button ng-click="$ctrl.createChildTodo(newTodo)">Create</button>
         </form>
-        <input type="text" ng-model="$ctrl.current" />
       `,
       bindings: {
         onCreate: '&',

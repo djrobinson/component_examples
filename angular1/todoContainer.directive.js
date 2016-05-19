@@ -13,9 +13,7 @@
 
           <h3>Todo List</h3>
           <ul>
-            <div ng-repeat="todo in ctrl.todos">
-              <todo></todo>
-            </div>
+            <todo ng-repeat="todo in ctrl.todos"></todo>
           </ul>
         `,
         controllerAs: 'ctrl',
